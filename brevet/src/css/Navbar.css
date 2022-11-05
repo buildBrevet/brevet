@@ -107,6 +107,7 @@
   border-radius: 2vh;
   background-color: orange;
   /* color: #aaaaaa; */
+  cursor: pointer;
 }
 
 .Nav-meta-button span {
@@ -129,7 +130,7 @@
   border: 1px solid orange;
   backdrop-filter: blur(4px);
   position: absolute;
-  right: 15px;
+  right: 25px;
   border-radius: 2vh;
   margin: auto;
   display: flex;
