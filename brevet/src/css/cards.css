@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap");
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   height: 0px;
   background-color: orange;
-}
+} */
 
 ::-webkit-scrollbar-thumb {
   background-color: black;
