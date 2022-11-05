@@ -1,0 +1,34 @@
+.mar-parent-con{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.mar-left-con{
+    width: 40%;
+    height: 100vh;
+}
+
+.mar-left-con h1{
+    font-size: 10vh;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    margin-top: 25vh;
+    width: fit-content;
+    position: fixed;
+    margin-left: 5vw;
+}
+
+.mar-right-con{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.mar-card{
+    margin: 1vw;
+    margin-right: 0vw;
+}

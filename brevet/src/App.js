@@ -11,6 +11,7 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import "./App.css";
 import Cards from "./components/cards";
 import Create from "./components/Create";
+import Marketplace from "./components/Marketplace";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
@@ -52,6 +53,9 @@ function App() {
   return (
     <>
       <Navbar account={account} />
+      {/* <Cards/> */}
+      <Marketplace/>
+      <Create/>
       <Home />
     </>
   );
