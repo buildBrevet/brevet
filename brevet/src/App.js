@@ -43,7 +43,7 @@ function App() {
   useEffect(() => {
     const getAccounts = async () => {
       const accounts = await web3Api.web3.eth.getAccounts();
-      console.log(accounts);
+      // console.log(accounts);
       setAccount(accounts[0]);
     };
     web3Api.web3 && getAccounts();
@@ -51,10 +51,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      {/* <Home /> */}
-      <Cards/>
-      <Create/>
+      <Navbar account={account} />
+      <Home />
     </>
   );
 }
