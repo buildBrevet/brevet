@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef } from "react";
+import React from "react";
 import "../css/Navbar.css";
 
 // export default function Navbar() {
@@ -42,7 +42,8 @@ import "../css/Navbar.css";
 //#ac0562
 
 export default function Navbar() {
-  const targetRef = useRef();
+  const targetRef = React.useRef();
+  const [meta, setMeta] = React.useState(1);
   //   const callback = (entries) => {
   //     const [entry] = entries;
   //     if (!entry.isIntersecting) {
@@ -225,6 +226,14 @@ export default function Navbar() {
             </svg>
           </div>
         </div>
+      </div>
+      <div className="Nav-meta">
+        <div>
+          <span>Connect your metamask wallet</span>
+        </div>
+        <button className="Nav-meta-button">
+          <span>Connect your meta mask wallet</span>
+        </button>
       </div>
     </>
   );

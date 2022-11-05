@@ -76,8 +76,48 @@
 }
 .nav-profile {
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
+.Nav-meta {
+  height: 15vh;
+  width: 20vw;
+  right: 15px;
+  position: absolute;
+  /* background-color: #742284; */
+  border-radius: 2vh 2vh 2vh 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid orange;
+  font-family: Rubik;
+  fle
+}
+
+.Nav-meta div {
+  margin-top: 2vh;
+}
+
+.Nav-meta-button {
+  margin-bottom: 2vh;
+  /* height: 5vh; */
+  padding: 20px;
+  /* width: inherit; */
+  border-radius: 2vh;
+  background-color: orange;
+  /* color: #aaaaaa; */
+}
+
+.Nav-meta-button span {
+  /* padding: 16px 24px; */
+  /* border-radius: 6px; */
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
 .sticky {
   position: fixed;
   top: 0;

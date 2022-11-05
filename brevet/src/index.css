@@ -3,6 +3,11 @@
   src: url(./assets/SFMonoMedium.woff) format("woff2");
 }
 
+@font-face {
+  font-family: "Rubik";
+  src: url(./assets/Rubik-Regular.ttf);
+}
+
 body {
   background-color: black;
   margin: 0;
