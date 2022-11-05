@@ -1,0 +1,84 @@
+/* .Nav-button {
+  height: 5vh;
+  width: 5vw;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 0vh 0vh 2vh 2vh;
+  transition: all ease 0.1s;
+}
+
+.Nav-Nav {
+  transition: all ease-in 1s;
+  height: 5vh;
+  width: 60vw;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 0vh 0vh 2vh 2vh;
+} */
+.Navbar {
+  margin: auto;
+  margin-top: 1vh;
+  height: 10vh;
+  width: 100vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  /* background-image: linear-gradient(
+    90deg,
+    #000000 0%,
+    #923cb5 0%,
+    #8d5185 100%
+  ); */
+  font-family: sfMono;
+  /* padding-right: px; */
+}
+/* .Navbar1 {
+  margin: auto;
+  margin-top: 1vh;
+  height: 8vh;
+  width: 95vw;
+  border-radius: 20px;
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    #000000 0%,
+    #923cb5 0%,
+    #8d5185 100%
+  );
+  justify-content: space-between;
+} */
+
+.Nav-item {
+  display: flex;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
+  /* flex-direction: row; */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2vw;
+}
+.Nav-items {
+  margin: auto;
+  margin-right: 2vw;
+}
+
+.Nav-logo {
+  height: 10vh;
+  /* margin-top: 2vh; */
+  /* margin-right: 10px; */
+}
+.Nav-items span {
+  color: #aaaaaa;
+}
+.Nav-items span:hover {
+  /* color: #ffffff; */
+  color: #742284;
+}
+.nav-profile {
+  padding-right: 15px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}

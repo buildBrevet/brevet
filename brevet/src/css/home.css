@@ -1,6 +1,6 @@
 .hom {
   background-color: black;
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
-  position: fixed;
+  /* position: fixed; */
 }
