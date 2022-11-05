@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Cards from "./cards";
 
 
 function Research(){
@@ -8,7 +9,7 @@ function Research(){
     return(
       <>
         <button onClick={() => setToggle(!toggle)}>Toggle State</button>
-
+        { toggle==true ? <Cards /> : <Cards /> }
         
       </>
     )
