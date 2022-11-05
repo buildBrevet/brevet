@@ -4,12 +4,16 @@ import Navbar from "./components/Navbar";
 import footer from "./components/footer";
 
 import "./App.css";
+import Cards from "./components/cards";
+import Create from "./components/Create";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      {/* <Home /> */}
+      <Cards/>
+      <Create/>
     </>
   );
 }
