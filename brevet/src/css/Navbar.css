@@ -93,6 +93,7 @@
   align-items: center;
   border: 1px solid orange;
   font-family: Rubik;
+  
 }
 
 .Nav-meta div {
@@ -107,6 +108,7 @@
   border-radius: 2vh;
   background-color: orange;
   /* color: #aaaaaa; */
+  cursor: pointer;
 }
 
 .Nav-meta-button span {
