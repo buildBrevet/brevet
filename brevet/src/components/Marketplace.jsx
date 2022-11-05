@@ -5,7 +5,10 @@ function Marketplace() {
   return (
     <div>
         <div className="mar-parent-con">
-            <div className="mar-left-con"><h1>Listed NFTs</h1></div>
+            <div className="mar-left-con">
+                <h1>Listed NFTs</h1>
+                <h2>All your NFTs at one place</h2>
+            </div>
             <div className="mar-right-con">
             <div className="mar-card car-card">
                 {/* <div className="car-btns"> */}
@@ -15,7 +18,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
@@ -28,7 +31,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
@@ -41,7 +44,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
@@ -54,7 +57,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
@@ -67,7 +70,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
@@ -80,7 +83,7 @@ function Marketplace() {
                 {/* <div className="car-bg-img-con">
                     <img src={require("../images/board-ape-bg.webp")} className="car-bg-img" alt="" />
                 </div> */}
-                <div className="mar-card car-card-info">
+                <div className="mar-card-info car-card-info">
                     <h2 className="car-coll-name">Collection Name</h2>
                     <h3 className="car-coll-val">0.05 ETH</h3>
                 </div>
