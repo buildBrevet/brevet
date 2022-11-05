@@ -57,15 +57,15 @@ function App() {
     <>
      <Navbar account={account} />
   <BrowserRouter>
-<div>
+{/* <div> */}
    <Routes>
-   <Route path="/" element={<Home />} exact></Route>
+   <Route path="/" element={<Home />}></Route>
  
    <Route path="/create" element={<Create/>}></Route>
    <Route path="/research" element={<Research/>}></Route>
    <Route path="/market" element={<Marketplace/>}></Route>
    </Routes>
-</div>
+{/* </div> */}
 
  </BrowserRouter>
      
