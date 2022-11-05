@@ -2,6 +2,7 @@
 import Home from "./components/home";
 import Navbar from "./components/Navbar";
 import footer from "./components/footer";
+import Research from "./components/Research";
 import { useState, useEffect } from "react";
 
 import Web3 from "web3";
@@ -52,7 +53,8 @@ function App() {
   return (
     <>
       <Navbar account={account} />
-      <Home />
+      {/* <Home /> */}
+      <Research />
     </>
   );
 }

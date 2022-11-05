@@ -2,11 +2,11 @@
 
 ::-webkit-scrollbar {
   height: 0px;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: orange;
   border-radius: 5px;
 }
 .car-cards-con {
