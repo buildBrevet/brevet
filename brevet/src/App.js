@@ -13,6 +13,7 @@ import "./App.css";
 import Cards from "./components/cards";
 import Create from "./components/Create";
 import Research from "./components/Research";
+import Marketplace from "./components/Marketplace";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
@@ -62,6 +63,7 @@ function App() {
  
    <Route path="/create" element={<Create/>}></Route>
    <Route path="/research" element={<Research/>}></Route>
+   <Route path="/market" element={<Marketplace/>}></Route>
    </Routes>
 </div>
 
