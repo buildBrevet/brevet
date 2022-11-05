@@ -1,22 +1,25 @@
 // import logo from "./logo.svg";
-import Home from "./components/home";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+
 import footer from "./components/footer";
 import { useState, useEffect } from "react";
 
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import Cards from "./components/cards";
 import Create from "./components/Create";
+import Research from "./components/Research";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
     provider: null,
     web3: null,
   });
+
 
   const [account, setAccount] = useState(null);
   // const [contracts, setContracts] = useState({ pollT: null, tohyo: null });
@@ -51,8 +54,20 @@ function App() {
 
   return (
     <>
-      <Navbar account={account} />
-      <Home />
+     <Navbar account={account} />
+  <BrowserRouter>
+<div>
+   <Routes>
+   <Route path="/" element={<Home />} exact></Route>
+ 
+   <Route path="/create" element={<Create/>}></Route>
+   <Route path="/research" element={<Research/>}></Route>
+   </Routes>
+</div>
+
+ </BrowserRouter>
+     
+     
     </>
   );
 }
