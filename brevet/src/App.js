@@ -9,6 +9,8 @@ import detectEthereumProvider from "@metamask/detect-provider";
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import Cards from "./components/cards";
+import Create from "./components/Create";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
@@ -41,7 +43,7 @@ function App() {
   useEffect(() => {
     const getAccounts = async () => {
       const accounts = await web3Api.web3.eth.getAccounts();
-      console.log(accounts);
+      // console.log(accounts);
       setAccount(accounts[0]);
     };
     web3Api.web3 && getAccounts();
@@ -49,7 +51,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar account={account} />
       <Home />
     </>
   );

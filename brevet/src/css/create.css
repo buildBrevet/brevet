@@ -1,0 +1,65 @@
+.cre-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 60vw;
+    margin: auto;
+    background-color: black;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.cre-inp-file{
+    height: 5vh;
+
+}
+
+input[type=file], input[type=textarea], input[type=text], textarea{
+    width: 20vw;
+    color: #fff;
+    padding: 1vh;
+    /* background-color: #fff; */
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #555;
+    font-size: 2vh;
+    font-weight: 600;
+    font-family: Rubik;
+    margin: 3vh;
+}
+
+input[type=file]::file-selector-button, .cre-submit{
+    margin-right: 2vw;
+    border: none;
+    background-color: orange;
+    padding: 1vh 1vw;
+    border-radius: 1vw;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover, .cre-submit:hover {
+    background: #ab0545;
+}
+
+.cre-inp-desc{
+    /* color: black !important; */
+    height: 10vh;
+    /* text-justify: newspaper; */
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.cre-submit{
+    padding: 2vh;
+    font-size: 2vh;
+    font-weight: 600;
+    width: 10vw;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
