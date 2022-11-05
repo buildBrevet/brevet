@@ -9,6 +9,8 @@ import detectEthereumProvider from "@metamask/detect-provider";
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import Cards from "./components/cards";
+import Create from "./components/Create";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({

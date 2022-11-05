@@ -2,7 +2,7 @@
 
 ::-webkit-scrollbar {
   height: 10px;
-  background-color: #fb2576;
+  background-color: orange;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -17,7 +17,7 @@
   align-items: center;
   /* justify-content: center; */
   font-family: Rubik;
-  color: #fb2576;
+  color: orange;
   overflow-x: scroll;
 }
 
@@ -32,7 +32,7 @@
   border-radius: 10px;
   margin: auto 2vw auto 2vw;
   align-items: flex-end;
-  background: url("../components/Assets/board-ape-bg.webp");
+  background: url("../images/bored-ape-bg.webp");
   background-size: 170%;
   background-position-x: 50%;
   transition: all 0.5s;
