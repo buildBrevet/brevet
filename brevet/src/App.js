@@ -53,7 +53,7 @@ function App() {
     <>
       <Navbar />
       {/* <Home /> */}
-      {/* <Cards/> */}
+      <Cards/>
       <Create/>
     </>
   );
