@@ -30,6 +30,7 @@
     #8d5185 100%
   ); */
   font-family: sfMono;
+  /* position: static; */
   /* padding-right: px; */
 }
 /* .Navbar1 {
@@ -122,7 +123,10 @@
   position: fixed;
   top: 0;
 }
-
+a {
+ 
+    text-decoration: none;
+}
 .nav-model {
   height: 8vh !important;
   width: 28vw !important;

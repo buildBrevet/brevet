@@ -1,6 +1,11 @@
 // import logo from "./logo.svg";
+<<<<<<< HEAD
 import Home, { contracts } from "./components/home";
+=======
+import Home from "./components/Home";
+>>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
 import Navbar from "./components/Navbar";
+
 import footer from "./components/footer";
 import React, { useState, useEffect } from "react";
 // contracts
@@ -11,14 +16,20 @@ import ResearchHelper from "./abis/ResearchHelper.json";
 
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
+<<<<<<< HEAD
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { create, CID, IPFSHTTPClient } from "ipfs-http-client";
 
 import { hookstate, useHookstate, State } from "@hookstate/core";
+=======
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+>>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
 
 import "./App.css";
 import Cards from "./components/cards";
 import Create from "./components/Create";
+import Research from "./components/Research";
+import Marketplace from "./components/Marketplace";
 
 const globalState = hookstate({
   BrevT: null,
@@ -45,9 +56,13 @@ export function App() {
     web3: null,
   });
 
+<<<<<<< HEAD
   const state = useGlobalState();
 
   var contracts = {};
+=======
+
+>>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
   const [account, setAccount] = useState(null);
   // const [contracts, setContracts] = useState({
   //   BrevT: null,
@@ -194,10 +209,28 @@ export function App() {
 
   return (
     <>
+<<<<<<< HEAD
       <Navbar account={account} />
       {/* <Home a={BrevT} b={BrevMP} c={nft} d={resH} /> */}
 
       <Create />
+=======
+     <Navbar account={account} />
+  <BrowserRouter>
+{/* <div> */}
+   <Routes>
+   <Route path="/" element={<Home />}></Route>
+ 
+   <Route path="/create" element={<Create/>}></Route>
+   <Route path="/research" element={<Research/>}></Route>
+   <Route path="/market" element={<Marketplace/>}></Route>
+   </Routes>
+{/* </div> */}
+
+ </BrowserRouter>
+     
+     
+>>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
     </>
   );
 }
