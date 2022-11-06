@@ -2,13 +2,6 @@ import { useState, useEffect } from "react";
 
 // import "../css/home.css";
 
-export var contracts = {
-  BrevT: null,
-  BrevMP: null,
-  nft: null,
-  resH: null,
-};
-
 export default function Home(props) {
   // return <div className="hom"></div>;
   const [loading, setLoading] = useState(true);
@@ -58,16 +51,16 @@ export default function Home(props) {
 
   useEffect(() => {
     // loadMarketplaceItems();
-    console.log(props);
-    console.log(contracts);
+    // console.log(props);
+    // console.log(contracts);
   }, []);
 
-  if (loading)
-    return (
-      <main style={{ padding: "1rem 0" }}>
-        <h2>Loading...</h2>
-      </main>
-    );
+  //   if (loading)
+  //     return (
+  //       <main style={{ padding: "1rem 0" }}>
+  //         <h2>Loading...</h2>
+  //       </main>
+  //     );
 
   return <div></div>;
 }
