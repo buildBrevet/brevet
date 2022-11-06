@@ -13,11 +13,10 @@ function Create({ nft, web3Api, marketplace }) {
   const uploadToIPFS = async (event) => {
     // console.log("inside uplode files");
     event.preventDefault();
-    const files = document.getElementById("uploadedFile");
-    const file = files.files[0];
-    // const file = event.target.files[0];
-    console.log("event target files: ",file);
-    if (typeof(file) != "undefined") {
+
+    const file = event.target.files[0];
+    console.log(event.target.files);
+    if (typeof file !== "undefined") {
       try {
         const result = client.add(file);
         console.log("result is: ",result);
