@@ -76,16 +76,16 @@ export default function Navbar() {
         </div>
         <div className="Nav-item">
           <div className="Nav-items">
-            <span>Home</span>
+            <a href="/"><span>Home</span></a>
           </div>
           <div className="Nav-items">
-            <span>Create</span>
+            <a href="/create"><span>Create</span></a>
           </div>
           <div className="Nav-items">
-            <span>My Collection</span>
+            <a href=""><span>My Collection</span></a>
           </div>
           <div className="Nav-items">
-            <span>Research Helper</span>
+            <a href="/research"><span>Research Helper</span></a>
           </div>
           <div className="Nav-items nav-profile">
             <svg

@@ -69,12 +69,33 @@ export default function Home(props) {
       <div className="hom-main-div">
         <div className="hom-block-1">
           <div className="hom-block-1-text">
-            <h1 className="hom-h1">Brevet....</h1>
+            <h1 className="hom-h1">What is Brevet.</h1>
             <h2 className="hom-h2">Lorem ipsum dolor sit amet consectetur.</h2>
             <h3 className="hom-h3">A marketplace for your NFTs. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga deserunt, rem facere exercitationem perferendis quod.</h3>
           </div>
           <div className="hom-block-1-img">
             <img src={require("../images/rocket.gif")} alt="" className="hom-img" />
+          </div>
+        </div>
+        <div className="hom-block-1">
+          <div className="hom-block-1-img">
+            <img src={require("../images/NFT/5348934.jpg")} alt="" className="hom-img hom-img-2" />
+          </div>
+          <div className="hom-block-1-text">
+            <h1 className="hom-h1">What is Brevet.</h1>
+            <h2 className="hom-h2">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h3 className="hom-h3">A marketplace for your NFTs. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga deserunt, rem facere exercitationem perferendis quod.</h3>
+          </div>
+        </div>
+
+        <div className="hom-block-1">
+          <div className="hom-block-1-text">
+            <h1 className="hom-h1">What is Brevet.</h1>
+            <h2 className="hom-h2">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h3 className="hom-h3">A marketplace for your NFTs. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga deserunt, rem facere exercitationem perferendis quod.</h3>
+          </div>
+          <div className="hom-block-1-img">
+            <img src={require("../images/evm.webp")} alt="" className="home-img-3" />
           </div>
         </div>
       </div>
