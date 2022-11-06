@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef } from "react";
+import React from "react";
 import "../css/Navbar.css";
 
 // export default function Navbar() {
@@ -41,8 +41,11 @@ import "../css/Navbar.css";
 //#742284
 //#ac0562
 
-export default function Navbar() {
-  const targetRef = useRef();
+export default function Navbar({ address }) {
+  const targetRef = React.useRef();
+  const [meta, setMeta] = React.useState(false);
+  const [meta1, setMeta1] = React.useState(1);
+
   //   const callback = (entries) => {
   //     const [entry] = entries;
   //     if (!entry.isIntersecting) {
@@ -68,6 +71,44 @@ export default function Navbar() {
   //     };
   //   }, [targetRef, options]);
 
+  React.useEffect(() => {
+    // metamask();
+  }, []);
+
+  function metamask() {
+    if (meta) {
+      return (
+        <div className="nav-model">
+          <span className="nav-address">{address}</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#999999"
+              class="w-6 h-6"
+              onClick={() => {
+                console.log(address);
+                navigator.clipboard.writeText(address);
+              }}
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+              />
+            </svg>
+          </span>
+        </div>
+      );
+    } else return;
+  }
+
+  //   function address(){
+  //     if(meta1)
+  //   }
+
   return (
     <>
       <div className="Navbar" ref={targetRef}>
@@ -87,14 +128,14 @@ export default function Navbar() {
           <div className="Nav-items">
             <a href="/research"><span>Research Helper</span></a>
           </div>
-          <div className="Nav-items nav-profile">
+          <div className="Nav-items nav-profile" onClick={() => setMeta(!meta)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
               height="50"
               viewBox="0 0 212 189"
             >
-              <g fill="none" fillRule="evenodd">
+              <g fill="none" fill-rule="evenodd">
                 <polygon
                   fill="#CDBDB2"
                   points="60.75 173.25 88.313 180.563 88.313 171 90.563 168.75 106.313 168.75 106.313 180 106.313 187.875 89.438 187.875 68.625 178.875"
@@ -226,6 +267,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {metamask()}
     </>
   );
 }

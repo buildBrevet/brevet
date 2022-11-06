@@ -76,7 +76,7 @@
 }
 .Nav-items span:hover {
   /* color: #ffffff; */
-  color: #742284;
+  color: #ff8fb1;
 }
 .nav-profile {
   padding-right: 15px;
@@ -127,8 +127,7 @@
   top: 0;
 }
 a {
- 
-    text-decoration: none;
+  text-decoration: none;
 }
 .nav-model {
   height: 8vh !important;
