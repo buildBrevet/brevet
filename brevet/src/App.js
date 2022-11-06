@@ -1,9 +1,9 @@
 // import logo from "./logo.svg";
 import Home from "./components/home";
 import Navbar from "./components/Navbar";
-
+import Bg from "./components/bg";
 import footer from "./components/footer";
-import React, { useState, useEffect, createContext, useRef } from "react";
+import React, { useState, useEffect } from "react";
 // contracts
 import BrevToken from "./abis/BrevToken.json";
 import BrevetMarketplace from "./abis/BrevetMarketplace.json";
@@ -99,8 +99,8 @@ export function App() {
 
   return (
     <>
-      <Navbar account={account} />
       <BrowserRouter>
+        <Navbar account={account} />
         {/* <div> */}
         <Routes>
           <Route
@@ -129,6 +129,7 @@ export function App() {
           <Route path="/research" element={<Research />}></Route>
           <Route path="/market" element={<Marketplace />}></Route>
         </Routes>
+        <Bg />
         {/* </div> */}
       </BrowserRouter>
     </>
