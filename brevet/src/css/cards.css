@@ -109,9 +109,11 @@
 }
 
 body{
+  height: 300vh;
+  width: max-content;
   /* background: linear-gradient(53deg, #4837A2, rgba(26, 0, 26, 1)); */
   background-size: 25px 25px;
-  background-image: linear-gradient(90deg, transparent 5%, transparent 5%), linear-gradient(transparent 5%, transparent 5%);
-  background: linear-gradient(10.93deg,#95199162 -19.03%,#3935b179 46.85%,#20a9b070) padding-box,linear-gradient(12.93deg,#dd14d671,#4d47f56f 55%,#3de7f377) border-box;
+  background-image: linear-gradient(90deg, transparent 5%, transparent 5%), linear-gradient(transparent 5%, transparent 5%) !important;
+  background: linear-gradient(10.93deg,#951991 -19.03%,#3935b1 46.85%,#20a9b0) padding-box !important;
  /* background: linear-gradient(180deg, black, blue);  */
 }

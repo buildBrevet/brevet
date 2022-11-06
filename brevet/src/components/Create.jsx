@@ -5,32 +5,46 @@ import { create as ipfsHttpClient } from "ipfs-http-client";
 const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
 function Create({ nft, web3Api, marketplace }) {
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState();
   const [price, setPrice] = useState(null);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+
   const uploadToIPFS = async (event) => {
     // console.log("inside uplode files");
     event.preventDefault();
-    const file = event.target.files[0];
-    console.log(event.target.files);
-    if (typeof file !== "undefined") {
+    const files = document.getElementById("uploadedFile");
+    const file = files.files[0];
+    // const file = event.target.files[0];
+    console.log("event target files: ",file);
+    if (typeof(file) != "undefined") {
       try {
-        const result = await client.add(file);
-        console.log(result);
+        const result = client.add(file);
+        console.log("result is: ",result);
         setImage(`https://ipfs.infura.io/ipfs/${result.path}`);
       } catch (error) {
         console.log("ipfs image upload error: ", error);
       }
     }
+    else{
+      console.log("undefined");
+    }
   };
-  const createNFT = async () => {
+  async function createNFT(e){
+    e.preventDefault();
     console.log("inside cNFT");
-    if (!image || !price || !name || !description) return;
+    console.log("image is: ",typeof(image));
+    console.log("price is: ", typeof(price));
+    console.log("name is: ", name);
+    console.log("desc is: ", description);
+
+    if (image || !price || !name || !description) return;
+    console.log("trying");
     try {
       const result = await client.add(
         JSON.stringify({ image, price, name, description })
-      );
+        );
+        console.log("error");
       mintThenList(result);
     } catch (error) {
       console.log("ipfs uri upload error: ", error);
@@ -87,7 +101,7 @@ function Create({ nft, web3Api, marketplace }) {
           className="cre-inp-file"
           onChange={uploadToIPFS}
         />
-        <button type="submit" className="cre-submit" onSubmit={createNFT}>
+        <button type="submit" className="cre-submit" onClick={createNFT}>
           Submit
         </button>
       </form>
