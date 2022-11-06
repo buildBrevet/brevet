@@ -44,7 +44,7 @@ input[type=file]::file-selector-button, .cre-submit{
 }
 
 input[type=file]::file-selector-button:hover, .cre-submit:hover {
-    background: #ab0545;
+    background: orangered;
 }
 
 .cre-inp-desc{
@@ -53,6 +53,7 @@ input[type=file]::file-selector-button:hover, .cre-submit:hover {
     /* text-justify: newspaper; */
     word-wrap: break-word;
     word-break: break-all;
+    max-width: 30vw !important;
 }
 .cre-submit{
     padding: 2vh;
@@ -63,3 +64,4 @@ input[type=file]::file-selector-button:hover, .cre-submit:hover {
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
+
