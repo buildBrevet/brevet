@@ -106,3 +106,7 @@
 .res-sell-or-buy{
   margin-left: 45vw !important;
 }
+
+body{
+  background: linear-gradient(53deg, #4837A2, rgba(26, 0, 26, 1));
+}

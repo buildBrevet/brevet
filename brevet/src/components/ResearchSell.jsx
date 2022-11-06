@@ -89,6 +89,7 @@ function ResearchSell() {
             <div className="mar-left-con research-sell-right">
                 <h1>Sell NFTs</h1>
                 <h2>All your NFTs at one place</h2>
+                <img src={require("../images/ill-2.png")} alt="" className="illustration sell" />
             </div>
         </div>
     </div>

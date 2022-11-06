@@ -35,16 +35,19 @@ input[type=file], input[type=textarea], input[type=text], textarea{
 input[type=file]::file-selector-button, .cre-submit{
     margin-right: 2vw;
     border: none;
-    background-color: orange;
+    /* background-color: rgb(69, 3, 69); */
+    background-color: black;
     padding: 1vh 1vw;
     border-radius: 1vw;
-    color: black;
+    color: white;
+    font-size: 3vh !important;
+    border: 2px solid black;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 input[type=file]::file-selector-button:hover, .cre-submit:hover {
-    background: orangered;
+    background: rgb(16, 0, 16);
 }
 
 .cre-inp-desc{

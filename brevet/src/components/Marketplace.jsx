@@ -8,6 +8,7 @@ function Marketplace() {
             <div className="mar-left-con">
                 <h1>Listed NFTs</h1>
                 <h2>All your NFTs at one place</h2>
+                <img src={require("../images/ill-1.png")} className="illustration" alt="" />
             </div>
             <div className="mar-right-con">
             <div className="mar-card car-card">
