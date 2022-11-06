@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap");
 
+<<<<<<< HEAD
+/* ::-webkit-scrollbar {
+  height: 0px;
+  background-color: orange;
+} */
+=======
 ::-webkit-scrollbar {
   width: 10px;
   height: 0px;
   background-color: black;
 }
+>>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
 
 ::-webkit-scrollbar-thumb {
   background-color: orange;
