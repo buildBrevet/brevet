@@ -1,15 +1,10 @@
-import { useState, useEffect, useContext } from "react";
-import { userContext } from "../App";
+import { useState, useEffect } from "react";
+import { Row, Col, Card, Button } from "react-bootstrap";
+import Web3 from "web3";
+
 // import "../css/home.css";
 
-export var contracts = {
-  BrevT: null,
-  BrevMP: null,
-  nft: null,
-  resH: null,
-};
-
-export default function Home() {
+export default function Home({ marketplace, web3Api, nft }) {
   // return <div className="hom"></div>;
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
@@ -18,58 +13,101 @@ export default function Home() {
     // Load all unsold items
     const itemCount = await market;
 
-    console.log(itemCount);
-    let items = [];
-    for (let i = 1; i <= itemCount; i++) {
-      const item = await contracts.brevetmarketplace.methods.items(i).call();
-      if (!item.sold) {
-        // get uri url from nft contractsract
-        const uri = await contracts.patentnft.tokenURI(item.tokenId);
-        // use uri to fetch the nft metadata stored on ipfs
-        const response = await fetch(uri);
-        const metadata = await response.json();
-        // get total price of item (item price + fee)
-        const totalPrice = await contracts.brevetmarketplace.methods
-          .getTotalPrice(item.itemId)
-          .call();
-        // Add item to items array
-        items.push({
-          totalPrice,
-          itemId: item.itemId,
-          seller: item.seller,
-          name: metadata.name,
-          description: metadata.description,
-          image: metadata.image,
-        });
+    const loadMarketplaceItems = async () => {
+      // Load all unsold items
+      // var itemCount = await marketplace
+      var itemCount = await marketplace.methods.itemCount().call();
+
+      console.log(itemCount);
+      let items = [];
+      for (let i = 1; i <= itemCount; i++) {
+        const item = await marketplace.methods.items(i).call();
+        if (!item.sold) {
+          // get uri url from nft contractsract
+          const uri = await nft.tokenURI(item.tokenId);
+          // use uri to fetch the nft metadata stored on ipfs
+          const response = await fetch(uri);
+          const metadata = await response.json();
+          // get total price of item (item price + fee)
+          const totalPrice = await marketplace.methods
+            .getTotalPrice(item.itemId)
+            .call();
+          //   Add item to items array
+          items.push({
+            totalPrice,
+            itemId: item.itemId,
+            seller: item.seller,
+            name: metadata.name,
+            description: metadata.description,
+            image: metadata.image,
+          });
+        }
       }
-    }
-    setLoading(false);
-    setItems(items);
-  };
+      setLoading(false);
+      setItems(items);
+    };
 
-  const buyMarketItem = async (item) => {
-    await (
-      await contracts.brevetmarketplace.purchaseItem(item.itemId, {
-        value: item.totalPrice,
-      })
-    ).wait();
-    loadMarketplaceItems();
-  };
+    const buyMarketItem = async (item) => {
+      await (
+        await marketplace.methods
+          .purchaseItem(item.itemId, {
+            value: item.totalPrice,
+          })
+          .call()
+      ).wait();
+      loadMarketplaceItems();
+    };
 
-  useEffect(() => {
-    loadMarketplaceItems();
-    // console.log(props);
-    console.log(market);
-  }, []);
+    useEffect(() => {
+      loadMarketplaceItems();
+    }, []);
 
-  if (loading)
+    if (loading)
+      return (
+        <userContext.Provider market={market}>
+          <main style={{ padding: "1rem 0" }}>
+            <h2>Loading...</h2>
+          </main>
+        </userContext.Provider>
+      );
+
     return (
-      <userContext.Provider market={market}>
-        <main style={{ padding: "1rem 0" }}>
-          <h2>Loading...</h2>
-        </main>
-      </userContext.Provider>
+      <div className="flex justify-center">
+        {items.length > 0 ? (
+          <div className="px-5 container">
+            <Row xs={1} md={2} lg={4} className="g-4 py-5">
+              {items.map((item, idx) => (
+                <Col key={idx} className="overflow-hidden">
+                  <Card>
+                    <Card.Img variant="top" src={item.image} />
+                    <Card.Body color="secondary">
+                      <Card.Title>{item.name}</Card.Title>
+                      <Card.Text>{item.description}</Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <div className="d-grid">
+                        <Button
+                          onClick={() => buyMarketItem(item)}
+                          variant="primary"
+                          size="lg"
+                        >
+                          Buy for{" "}
+                          {web3Api.web3.utils.fromWei(item.totalPrice, "ether")}{" "}
+                          ETH;
+                        </Button>
+                      </div>
+                    </Card.Footer>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        ) : (
+          <main style={{ padding: "1rem 0" }}>
+            <h2>No listed assets</h2>
+          </main>
+        )}
+      </div>
     );
-
-  return <div></div>;
+  };
 }
