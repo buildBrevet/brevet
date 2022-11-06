@@ -5,7 +5,7 @@ pragma solidity ^0.8.1;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract Brevet is ReentrancyGuard {
+contract BrevetMarketplace is ReentrancyGuard {
     address payable public brevetOwner;
     uint256 public feePercent;
     uint256 public itemCount;
