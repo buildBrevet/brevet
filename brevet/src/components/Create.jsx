@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/create.css";
-import { create, CID, IPFSHTTPClient } from "ipfs-http-client";
+// import { create, CID, IPFSHTTPClient } from "ipfs-http-client";
 
 function Create() {
   return (

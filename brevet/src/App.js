@@ -1,9 +1,5 @@
 // import logo from "./logo.svg";
-<<<<<<< HEAD
-import Home, { contracts } from "./components/home";
-=======
-import Home from "./components/Home";
->>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
+import Home, { contracts } from "./components/Home";
 import Navbar from "./components/Navbar";
 
 import footer from "./components/footer";
@@ -16,14 +12,7 @@ import ResearchHelper from "./abis/ResearchHelper.json";
 
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
-<<<<<<< HEAD
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { create, CID, IPFSHTTPClient } from "ipfs-http-client";
-
-import { hookstate, useHookstate, State } from "@hookstate/core";
-=======
 import { BrowserRouter, Route, Routes } from "react-router-dom";
->>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
 
 import "./App.css";
 import Cards from "./components/cards";
@@ -31,7 +20,7 @@ import Create from "./components/Create";
 import Research from "./components/Research";
 import Marketplace from "./components/Marketplace";
 
-const globalState = hookstate({
+const globalState = ({
   BrevT: null,
   BrevMP: null,
   nft: null,
@@ -46,7 +35,7 @@ export const accessGlobalState = (a = null, b = null, c = null, d = null) => {
   wrapState(globalState, a, b, c, d);
 };
 export const useGlobalState = (a = null, b = null, c = null, d = null) => {
-  wrapState(useHookstate(globalState), a, b, c, d);
+  wrapState((globalState), a, b, c, d);
 };
 
 export function App() {
@@ -56,13 +45,6 @@ export function App() {
     web3: null,
   });
 
-<<<<<<< HEAD
-  const state = useGlobalState();
-
-  var contracts = {};
-=======
-
->>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
   const [account, setAccount] = useState(null);
   // const [contracts, setContracts] = useState({
   //   BrevT: null,
@@ -140,16 +122,23 @@ export function App() {
       brevetmarketplaceadd
     );
 
-    contracts = {
-      BrevT: brevToken,
+    // let contracts = {
+    //   BrevT: brevToken,
+    //   BrevMP: brevetmarketplace,
+    //   nft: Patentnft,
+    //   resH: researchHelper,
+    // };
+    const contracts = {
+      BrevT: "hehehehehe",
       BrevMP: brevetmarketplace,
       nft: Patentnft,
       resH: researchHelper,
     };
-    state.set1(brevToken, brevetmarketplace, Patentnft, researchHelper);
-    console.log(state.get());
+    
+    // state.set1(brevToken, brevetmarketplace, Patentnft, researchHelper);
+    // console.log(state.get());
 
-    console.log(contracts);
+    console.log("Contracts is: ",contracts);
   };
   useEffect(() => {
     web3Api.web3 && contractInstance();
@@ -209,17 +198,11 @@ export function App() {
 
   return (
     <>
-<<<<<<< HEAD
-      <Navbar account={account} />
-      {/* <Home a={BrevT} b={BrevMP} c={nft} d={resH} /> */}
-
-      <Create />
-=======
      <Navbar account={account} />
   <BrowserRouter>
 {/* <div> */}
    <Routes>
-   <Route path="/" element={<Home />}></Route>
+   <Route path="/" element={<Home/>}></Route>
  
    <Route path="/create" element={<Create/>}></Route>
    <Route path="/research" element={<Research/>}></Route>
@@ -230,7 +213,6 @@ export function App() {
  </BrowserRouter>
      
      
->>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
     </>
   );
 }

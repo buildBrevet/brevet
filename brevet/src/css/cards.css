@@ -1,20 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap");
 
-<<<<<<< HEAD
-/* ::-webkit-scrollbar {
-  height: 0px;
-  background-color: orange;
-} */
-=======
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 0px;
-  background-color: black;
+  height: 10px;
+  background-color: transparent ;
 }
->>>>>>> d70054467bb51ca73897b9d7556f534c5c3beac3
 
 ::-webkit-scrollbar-thumb {
-  background-color: orange;
+  background-color: #4837A2;
   border-radius: 5px;
 }
 .car-cards-con {
@@ -115,5 +107,7 @@
 }
 
 body{
-  background: linear-gradient(53deg, #4837A2, rgba(26, 0, 26, 1));
+  /* background: linear-gradient(53deg, #4837A2, rgba(26, 0, 26, 1)); */
+ /* background: linear-gradient(10.93deg,#951990 -19.03%,#3a35b1 46.85%,#20a8b0) padding-box,linear-gradient(12.93deg,#dd14d5,#4e47f5 55%,#3de8f3) border-box;*/
+   background: linear-gradient(180deg, black, blue); 
 }

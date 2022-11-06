@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "../css/home.css"
 // import "../css/home.css";
 
 export var contracts = {
@@ -13,6 +13,8 @@ export default function Home(props) {
   // return <div className="hom"></div>;
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
+
+  console.log("hehehhe ", props)
 
   // const loadMarketplaceItems = async () => {
   //   // Load all unsold items
@@ -64,9 +66,18 @@ export default function Home(props) {
 
   if (loading)
     return (
-      <main style={{ padding: "1rem 0" }}>
-        <h2>Loading...</h2>
-      </main>
+      <div className="hom-main-div">
+        <div className="hom-block-1">
+          <div className="hom-block-1-text">
+            <h1 className="hom-h1">Brevet....</h1>
+            <h2 className="hom-h2">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h3 className="hom-h3">A marketplace for your NFTs. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga deserunt, rem facere exercitationem perferendis quod.</h3>
+          </div>
+          <div className="hom-block-1-img">
+            <img src={require("../images/rocket.gif")} alt="" className="hom-img" />
+          </div>
+        </div>
+      </div>
     );
 
   return <div></div>;
