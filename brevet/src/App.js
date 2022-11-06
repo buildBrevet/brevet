@@ -26,13 +26,9 @@ export function App() {
     web3: null,
   });
 
-  const [account, setAccount] = useState(null);
-  // const [contracts, setContracts] = useState({
-  //   BrevT: null,
-  //   BrevMP: null,
-  //   nft: null,
-  //   resH: null,
-  // });
+  const [account, setAccount] = useState();
+  const [patentnft, setpatentnft] = useState();
+  const [brevetmarketplace, setBrevetMarketplace] = useState();
 
   useEffect(() => {
     const loadProvider = async () => {
@@ -92,9 +88,14 @@ export function App() {
         BrevetMarketplace.abi,
         brevetmarketplaceadd
       );
+      setBrevetMarketplace({ ...brevetmarketplace, brevetmarketplace });
+      setpatentnft({ ...Patentnft, Patentnft });
+      console.log(brevetmarketplace);
     };
     web3Api.web3 && contractInstance();
   }, [web3Api.web3]);
+
+  // console.log("Marketplace is: ", brevetmarketplace);
 
   return (
     <>
@@ -102,9 +103,29 @@ export function App() {
       <BrowserRouter>
         {/* <div> */}
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route
+            path="/"
+            element={
+              brevetmarketplace != null && (
+                <Home
+                  marketplace={brevetmarketplace}
+                  nft={patentnft}
+                  web3Api={web3Api}
+                />
+              )
+            }
+          ></Route>
 
-          <Route path="/create" element={<Create />}></Route>
+          <Route
+            path="/create"
+            element={
+              <Create
+                nft={patentnft}
+                web3Api={web3Api}
+                marketplace={brevetmarketplace}
+              />
+            }
+          ></Route>
           <Route path="/research" element={<Research />}></Route>
           <Route path="/market" element={<Marketplace />}></Route>
         </Routes>
